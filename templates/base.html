@@ -1,0 +1,26 @@
+{% spaceless %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% block title %}{{ SITE_NAME }}{% endblock %}</title>
+	</head>
+
+	<body>
+		<header>
+		{% block header %}{% endblock %}
+		</header>
+
+		<main>
+		{% block content %}{% endblock %}
+		</main>
+
+
+		<footer>
+		{% block footer %}{% endblock %}
+		</footer>
+
+		<script></script>
+		{% block js %}{% endblock %}
+	</body>
+<html>
+{% endspaceless %}

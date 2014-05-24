@@ -1,3 +1,9 @@
+{% extends "base.html" %}
+
+{% block title %}{{ SITE_NAME }}{% endblock %}
+
+{% block header %}
+
 <form action="{% url 'dotasite.views.login' %}" method="post"> 
     {% csrf_token %}
     Username: <input type="text" name="username" /> <br/>
@@ -5,6 +11,10 @@
     <input type="submit" value="Login" />
 </form>
 
-{% if user.is_authenticated %}
-Hello {{ user.username }}!
-{% endif %}
+{% endblock %}
+
+{% block content %}
+	{% if user.is_authenticated %}
+	Hello {{ user.username }}!
+	{% endif %}
+{% endblock %}
