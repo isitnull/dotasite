@@ -1,26 +1,25 @@
 {% spaceless %}
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>{% block title %}{{ SITE_NAME }}{% endblock %}</title>
-	</head>
+    <head>
+        <title>{% block title %}{{ SITE_NAME }}{% endblock %}</title>
+    </head>
 
-	<body>
-		<header>
-		{% block header %}{% endblock %}
-		</header>
+    <body>
+        <header>
+        {% include "header.html" %}
+        </header>
 
-		<main>
-		{% block content %}{% endblock %}
-		</main>
+        <main>
+        {% block content %}{% endblock %}
+        </main>
 
+        <footer>
+        {% block footer %}{% endblock %}
+        </footer>
 
-		<footer>
-		{% block footer %}{% endblock %}
-		</footer>
-
-		<script></script>
-		{% block js %}{% endblock %}
-	</body>
+        <script></script>
+        {% block js %}{% endblock %}
+    </body>
 <html>
 {% endspaceless %}

@@ -1,0 +1,15 @@
+<div class="header-logo-container">
+	{% include "header_logo.html" %}
+</div>
+
+<div class="header-nav-container">
+	{% include "header_nav.html" %}
+</div>
+
+<div class="header-user-container">
+	{% if user.is_authenticated %}
+		{% include "header_account.html" %}
+	{% else %}
+		{% include "header_login.html" %}
+	{% endif %}
+</div>
